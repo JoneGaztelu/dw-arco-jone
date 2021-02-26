@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Competiciones{% endblock %}
+
+{% block body %}
+    <h1>Edit Competiciones</h1>
+
+    {{ include('competiciones/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('competiciones_index') }}">back to list</a>
+
+    {{ include('competiciones/_delete_form.html.twig') }}
+{% endblock %}

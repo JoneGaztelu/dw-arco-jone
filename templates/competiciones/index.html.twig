@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Competiciones index{% endblock %}
+
+{% block body %}
+    <h1>Competiciones index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Place</th>
+                <th>Date</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for competicione in competiciones %}
+            <tr>
+                <td>{{ competicione.id }}</td>
+                <td>{{ competicione.place }}</td>
+                <td>{{ competicione.date ? competicione.date|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('competiciones_show', {'id': competicione.id}) }}">show</a>
+                    <a href="{{ path('competiciones_edit', {'id': competicione.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('competiciones_new') }}">Create new</a>
+{% endblock %}

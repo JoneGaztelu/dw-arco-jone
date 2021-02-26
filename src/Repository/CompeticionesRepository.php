@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Competiciones;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityRepository;
 
 /**
  * @method Competiciones|null find($id, $lockMode = null, $lockVersion = null)

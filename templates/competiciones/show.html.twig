@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Competiciones{% endblock %}
+
+{% block body %}
+    <h1>Competiciones</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ competicione.id }}</td>
+            </tr>
+            <tr>
+                <th>Place</th>
+                <td>{{ competicione.place }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ competicione.date ? competicione.date|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('competiciones_index') }}">back to list</a>
+
+    <a href="{{ path('competiciones_edit', {'id': competicione.id}) }}">edit</a>
+
+    {{ include('competiciones/_delete_form.html.twig') }}
+{% endblock %}
