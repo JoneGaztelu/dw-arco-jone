@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Competiciones{% endblock %}
+
+{% block body %}
+    <h1>Create new Competiciones</h1>
+
+    {{ include('competiciones/_form.html.twig') }}
+
+    <a href="{{ path('competiciones_index') }}">back to list</a>
+{% endblock %}
