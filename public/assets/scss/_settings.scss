@@ -1,0 +1,41 @@
+$primary-color: #669999;
+$secondary-color: #B3CCCC;
+$accent-color: #F0F5F5;
+$cambio: 10;
+
+h1 {
+    font-size: 36px; 
+    background-color: darken($primary-color,10%);
+    color: white;
+}
+h2 {
+    font-size: 30px - $cambio; 
+    background-color: lighten($secondary-color,10%);
+    color: white;
+}
+h3 {
+    font-size: 24px * $cambio; 
+    background-color: saturate($primary-color,30%);
+    color: white;
+}
+h4 {
+    font-size: 20px / $cambio; 
+    background-color: desaturate($primary-color,30%);
+    color: white;
+}
+h5 {
+    font-size: (18px/16px) * 1em; 
+    background-color: transparentize($primary-color,0.8);
+    color: white;
+}
+
+footer{
+    background-color: $accent-color;
+    color: $primary-color;
+    clear: both;
+    padding: 0 0.5em 3em 0.5em;
+    border-top: 1px solid $accent-color;
+    text-align: center;
+    text-decoration: none;
+}
+
